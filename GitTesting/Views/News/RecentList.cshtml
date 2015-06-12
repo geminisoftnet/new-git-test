@@ -1,0 +1,16 @@
+﻿@model IEnumerable<NewsViewModel>
+<div class="container">
+    <div class="row">
+        @foreach(var n in Model)
+        {
+        <div class="col-xs-4">
+            <h2>@n.Title</h2>
+            <span class="meta meta-date">@n.CreateDate.ToString("HH:mm dd MMMM yyyy")</span>
+            <div class="content">
+                @n.Content
+            </div>
+        </div>
+        }
+    </div>
+</div>
+
